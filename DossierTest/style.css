@@ -1,0 +1,315 @@
+/*Ceci est un commentaire en CSS*/
+body {
+    background-color: #ebf7ff;
+}
+p {
+    color : royalblue;
+    font-family: Arial;
+    font-size: 2em;
+    font-style: italic;
+    margin: 50px;
+    background-color: #bac9ce;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    padding-left: 20px;
+    padding-right: 200px;
+}
+h1 {
+    color : rgb(93, 93, 224);
+    font-family: "Lobster", cursive;
+    font-size: 3em;
+    text-align: center;
+
+    /* padding: 150px; */
+
+    /* Ombre du texte avec décallage horizontal / décallage vertical / adoucissement du dégradé / couleur de l'ombre
+    A utiliser principalement pour les titres principaux */
+    /* text-shadow: 6px 6px 0px #aebbd1; */
+
+    /* L'arrière plan est une image */
+    /* background-image: url("../images/ciel.jpg"); */
+
+    /* Permet de fixer l'image d'arrière plan (quand on scroll on voit une sorte de défilement)
+    background-attachment: fixed; */
+
+    /* Image couvre la totalité de la largeur
+    backgroud-size: cover; */
+
+    /* Permet de centrer l'image
+    background-position: center; */
+
+    /* Permet de rendre l'image plus ou moins opaque
+    opacity: 0.5; */
+
+    /* background: linear-gradient(to right, #373B44, #4286f4); */
+}
+
+h2 {
+    font-family: Arial, sans serif;
+    font-size: 2.5em;
+}
+
+a {
+    font-size: 2em;
+    text-decoration: none;
+    color: white;
+    background-color: #023e8a;
+    /* Permet de changer un inline comme a en block via display */
+    display: block;
+    width: 300px;
+    height: 100px;
+}
+
+a:hover {
+    color: deeppink;
+    /* Souligne l'hypertexte au survol */
+    text-decoration: underline;
+}
+
+/* Pseudo-class "clique" (classe qui permet les intéractions au clique) */
+a:active {
+    /* change couleur soulignement de l'hypertexte */
+    text-decoration-color: #1d313f;
+}
+
+/* Pseudo-classe "selection" (classe qui permet les intéractions à la sélection au clavier ou à la souris) */
+a:focus {
+    background-color: #1d313f;
+    color: white;
+    outline-color: deeppink;
+}
+
+.ma_class {
+    color : black;
+}
+
+.introduction {
+    font-weight: 700;
+    text-decoration: underline;
+    color : rgb(253, 19, 144);
+}
+
+.lobster-regular {
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.demoBorder{
+    /* Bordure pseudo-ronde  */
+    border: 2px solid #36696d;
+    border-radius: 10px 30px 0px 90px;
+    text-align: center;
+    padding: 150px;
+    margin: auto;
+    width: fit-content;
+    
+
+    /* Ombre des bordures avec décallage horizontal / décallage vertical / adoucissement du dégradé / couleur de l'ombre
+    A utiliser avec parcimonie */
+    box-shadow: 6px 6px 15px rgb(29, 49, 63);
+
+    /* bordure carrées avec 4 styles differents en fonction des cotes */
+    /* border-bottom: 2px solid #36696d;
+    border-right: 6px dotted deeppink;
+    border-left: 3px double rebeccapurple;
+    border-top: 4px dashed orange; */
+
+    /* bordure carrée de taille 2px, effet pointillé, avec sa couleur */
+    /* border: 2px dotted #36696D; */
+
+    /* bordure carrée de taille 2px, effet solide/continue, avec sa couleur*/
+    /* border: 2px solid #36696D; */
+}
+
+/* Création d'une pseudo-classe survole (classe qui permet les intéractions en survolant avec la souris) */
+img:hover {
+    opacity: 0.5;
+}
+
+/* Pseudo-classe "Siblings" qui permet une interaction d'un élement à travers un élement voisin déjà dynamisé */
+img:hover + h2{
+    color: deeppink;
+}
+
+.banner {
+    padding: 100px 0;
+    background: url("../images/imagesTest/oiseaux.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    margin: auto;
+    /* height: 600px; */
+}
+
+
+/* Conteneur qui agence des élements avec FlexBox */
+/* .conteneur { */
+    /* Elements à l'intérieur du conteneur sont prêt à être agencés comme on veut: */
+    /* display: flex; */
+    /* Eléments sont alignés en une ligne dans conteneur*/
+    /* flex-direction: row; */
+    /* Eléments sont centrés-collés dans conteneur*/
+    /* justify-content: center; */
+    /* Permet espacement de 20 px quand élements sont centrés-collés*/
+    /* gap: 20px; */
+
+    /* Eléments laissent place entre eux dans conteneur */
+    /* justify-content: space-around; */
+
+    /* Permet retour à la ligne automatique en fonction taille de la fenêtre */
+    /* flex-wrap: wrap; */
+
+    /* Permet alignement selon axe vertical */
+    /* height: 600px;
+    align-items: center; */
+
+    
+
+    /* Eléments sont sérrés-gauche-collés dans conteneur
+    justify-content: flex-start; */
+
+    /* Eléments sont sérrés-droite-collés dans conteneur
+    justify-content: flex-end; */
+
+    /* Eléments ont espace entre eux en prenant tout l'espace dans conteneur
+    justify-content: space-between; */
+/* } */
+
+
+.conteneur{
+    /* Autre valeur de display qui prend grid (on connait flex) */
+    display: grid;
+    /* Permet de créer 5 colonnes de taille 250 px */
+    /* grid-template-columns: 250px 250px 250px 250px 250px; */
+    /* Prends toute la place disponible dans la page en créant 5 colonnes, fr signifie fraction units */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    /* Permet de créer 2 lignes de taille 150px et 3502px */
+    grid-template-rows: 150px 75px 75px 200px 100px;
+    gap: 20px;
+
+
+}
+
+
+/* Meme type de boites */
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+    background-color: white;
+    border-radius: 10px;
+    
+    
+    /* width: fit-content; */
+    font-size: 3em;
+}
+
+/* spécification pour chaque boîte */
+/* ordre change l'ordre d'affichage de chaque élement */
+/* flex change la taille relativement aux autres */
+.one {
+    /* order: 3; */
+    grid-column-start: 1;
+    grid-column-end: 6;
+
+}
+
+.two {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    
+}
+
+.three {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+.four{
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+.five{
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 3;
+}
+
+.six{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 4;
+}
+
+.seven{
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 4;
+    grid-row-end: 4;
+}
+
+.eight{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 5;
+}
+
+.nine{
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row-start: 5;
+    grid-row-end: 5;
+}
+
+
+/* .conteneurMacareux{
+    display: flex;
+    flex-direction: column;
+} */
+
+.boxSavoirMacareux{
+    background-color: #fff;
+    border-radius: 10px;
+    border: 3px solid black;
+    font-size: 2em;
+    width: 250px;
+    text-align: center;
+
+    /* Permet de changer un bock en inline */
+    /* display: inline; */
+    /* N'a aucune incidence car se comporte comme un inline donc on peut pas changer taille */
+    /* width: 1000px; */
+
+    /* Se comporte comme un inline mais on peut modifier taille */
+    /* display: inline-block;
+    width: 200px; */
+
+    /* Permet de faire disparaître des blocks qui pourraient mal s'adapter aux changements de format (ordi à tel par exemple) */
+    display: none;
+}
+
+
+/* meme pour un inline-block, en différençant les élements --> peut les changer séparemment */
+.macareux1{
+    height: 100px;
+}
+
+.macareux2{
+    height: 200px;
+}
+
+.macareux3{
+    height: 300px;
+}
