@@ -60,6 +60,42 @@ a {
     height: 100px;
 }
 
+td, th {
+    border: 1px solid black;
+    padding: 15px;
+}
+
+caption {
+    padding-bottom: 15px;
+}
+
+table {
+    padding: 200px;
+    /* Titre en bas du tableau: */
+    /* caption-side: bottom; */
+    /* fusionne les cellules tableau entre elles */
+    border-collapse: collapse;
+    /* Centre le tableau en millieu de page */
+    margin: auto;
+}
+
+/* formulaire fonctionne comme conteneur --> display: flex/grid utilisé */
+form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 50%;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.autoSizing {
+    width: fit-content;
+}
+
 a:hover {
     color: deeppink;
     /* Souligne l'hypertexte au survol */
