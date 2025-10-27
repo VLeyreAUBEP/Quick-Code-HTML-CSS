@@ -1,0 +1,59 @@
+h1, h2 {
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 80px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+
+
+caption {
+    font-size: 1.5em;
+    padding-bottom: 50px;
+
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #a5b4fc;
+    white-space: nowrap;
+}
+
+td {
+    padding: 80px;
+}
+
+
+/* ----------------------------------------------------------------Partie .mesClasses-------------------------------------------------------------- */
+
+.divBordureDroitBas{
+    border-right: 1px solid #8e86b5;
+    border-bottom: 1px solid #8e86b5;
+    padding: 50px;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 80px;
+}
+
+.divBordureDroitBas h2{
+    margin-top: 30px;
+}
+
+.divBordureDroitBas ul{
+    margin-top: 30px;
+}
+
+
+.divBordureDroitBas + div {
+    text-align: center;
+}
+
+.mainAPropos{
+    margin: auto;
+}
