@@ -87,10 +87,36 @@ form {
     width: 50%;
 }
 
-input {
+
+input[type = 'submit'] {
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+input,
+textarea {
     padding: 10px;
     border: 1px solid black;
+    outline: none;
+    margin-bottom: 20px;
+    border-radius: 10px;
 }
+
+fieldset{
+    background-color: #BAC9CE;
+}
+
+legend {
+    background-color: white;
+}
+
+:required {
+    background-color:#F2A3BB;
+}
+
+/* :focus {
+    background-color: rgb(230, 57, 57);
+} */
 
 .autoSizing {
     width: fit-content;
@@ -348,4 +374,72 @@ img:hover + h2{
 
 .macareux3{
     height: 300px;
+}
+
+/* Responsive design avec média query */
+
+@media screen and (max-width: 1200px) {
+    p{
+        color: deeppink;
+    }
+}
+
+/* Ne marche pas dans mon cas car utilisation grid */
+@media screen and (max-width: 960px){
+    .conteneur {
+        flex-direction: column;
+    }
+
+    /* Supprime l'image de manière responsive si en dessous de 960px */
+    img {
+        display: none;
+    }
+
+    /* Change la taille de l'image de 50% et/ou définit différentes largeur/hauteur
+    img {
+        width: 50%;
+        min-width: 400px;
+        min-height: 400px;
+        max-width: 400px;
+        max-height: 400px;
+    } */
+
+    /* Scroll si le texte dépasse les bords, pas super bien représenté sur cette page */
+    p {
+        overflow: scroll;
+    }
+}
+
+/* Cas de figure: paragraphe dépasse bordures: */
+
+/* CSS de base du paragraphe */
+/* p {
+    width: 250px;
+    height: 110px;
+    text-align: justify;
+    border: 1px solid black;
+} */
+
+/* Pour un paragraphe trop long, ça va dépasser sur des plus petits écrans */
+
+/* Utilisation de média query overflow, exemple: */
+
+@media screen and (max-width: 960px){
+    p {
+    width: 250px;
+    height: 110px;
+    text-align: justify;
+    overflow: auto; /* valeur automatique choisie par navigateur */
+
+    /* Autres valeurs d'overflow: */
+    /* overflow: visible; partie du paragraphe qui dépasse reste visible volontairement
+    overflow: hidden; partie du paragraphe qui dépasse est cachée
+    overflow: scroll; partie du paragraphe qui dépasse accessible en scrollant */
+
+    /* text-overflow: ellipsis; et white-space: no-wrap; permet d'afficher ... à la fin du texte
+    pour signaler que celui-ci est tronqué 
+    docu sur: https://developer.mozilla.org/fr/docs/Web/CSS/text-overflow*/
+
+    }
+
 }

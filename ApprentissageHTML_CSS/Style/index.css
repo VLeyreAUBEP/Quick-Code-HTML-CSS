@@ -1,0 +1,143 @@
+/* ----------------------------------------------------------------Partie .mesClasses-------------------------------------------------------------- */
+
+.imagePaysage {
+    background-color: white;
+    padding: 80px;
+}
+
+.imagePaysage h2 {
+    color:#242424;
+    text-align: center;
+    margin-bottom: 80px;
+} 
+
+.imagePaysage div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.sectionAccueilParaPhotoContainer{
+    display: flex;
+    flex-direction: row;
+    max-width: 1000px;
+    justify-content: center;
+    margin: auto;
+}
+
+.sectionAccueilParaPhotoContainer h1 {
+    margin-bottom: 15px;
+}
+
+.sectionAccueilParaPhotoContainer p {
+    margin-bottom: 30px;
+}
+
+.sectionAccueilParaPhotoContainer div {
+    padding-right: 80px;
+}
+
+.divAccueilParaPhotoBox{
+    padding: 50px;
+}
+
+/* ----------------------------------------------------------------Partie formulaire-------------------------------------------------------------- */
+
+.sectionContact h2{
+    color: #A5B4FC;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Utilisation display: grid - différent du corrigé */
+
+form {
+    display: grid;
+    max-width: 1000px;
+    margin: auto;
+    color: white;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 30px;
+}
+
+form div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.nom {
+    grid-column: 1;
+    grid-row: 1;
+}
+    
+
+.email {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.message {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 2;
+}
+
+input,
+textarea {
+  padding: 15px;
+  border-radius: 3px;
+  border: none;
+}
+
+form input[type='submit'] {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 3;
+    width: 200px;
+    margin: auto;
+}
+
+@media screen and (max-width: 996px) {
+
+    .sectionAccueilParaPhotoContainer{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sectionAccueilParaPhotoContainer div {
+        padding-right: 0;
+        text-align: center;
+        order: 2;
+    }
+
+    .sectionAccueilParaPhotoContainer img {
+        margin-bottom: 20px;
+        width: 100%;
+        order: 1;
+    }
+
+    .imagePaysage {
+        padding: 20px;
+    }
+
+    .imagePaysage div {
+        flex-direction: column;
+    }
+
+    .sectionContact {
+        padding: 50px 20px;
+    } 
+
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+}

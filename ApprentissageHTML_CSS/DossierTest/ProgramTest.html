@@ -187,147 +187,162 @@
                 <!-- mettre label et input dans un p ou div pour que ce soit sur une même ligne -->
                 <!-- label labélise le champ -->
                 <!-- for - id font le lien entre label - champ -->
-                <label for = "prenom">Prénom:</label>
-                <!-- input = champ de saisies -->
-                <!-- type = "text" -- monoligne -->
-                <!-- name nomme correctement le champ -->
-                <!-- placeholder: prérempli le champ et disparaît quand on tape dedans -->
-                <!-- size: taille du champ -->
-                <!-- maxlength: nombre maximum de caractères -->
-                <input type = "text" name = "prenom" id = "prenom" placeholder = "Ex. : Mathieu" size = "30"  maxlength = "20">
+                 <fieldset>
+                    <legend>Vos coordonnées</legend>
+                    <label for = "prenom">Prénom:</label>
+                    <!-- input = champ de saisies -->
+                    <!-- type = "text" -- monoligne -->
+                    <!-- name nomme correctement le champ -->
+                    <!-- placeholder: prérempli le champ et disparaît quand on tape dedans -->
+                    <!-- size: taille du champ -->
+                    <!-- maxlength: nombre maximum de caractères -->
+                    <!-- focus change l'apparnce du champ lorsque le curseur se trouve à l'intérieur -->
+                    <input type = "text" name = "prenom" id = "prenom" placeholder = "Ex. : Mathieu" size = "30"  maxlength = "20" focus>
 
-                <label for = "email">Email:</label>
-                <input type = "email" name = "email" id = "email" placeholder = "Ex. : mathieu.test@gmail.com">
+                    <!-- autofocus: curser placé directement dans champ autofocus, required: doit remplir le champ, invalid: le champ n'est pas bien rempli -->
+                    <label for = "email">Email:</label>
+                    <input type = "email" name = "email" id = "email" placeholder = "Ex. : mathieu.test@gmail.com" autofocus required>
 
-                <label for = "url">URL:</label>
-                <input type = "url" name = "url" id = "url" placeholder = "Ex. : https://fr.wikipedia.org/wiki/Test">
+                    <label for = "url">URL:</label>
+                    <input type = "url" name = "url" id = "url" placeholder = "Ex. : https://fr.wikipedia.org/wiki/Test">
 
-                <label for = "tel">Tel:</label>
-                <input type = "tel" name = "tel" id = "tel" placeholder = "Ex. : 078-000-00-00">
+                    <label for = "tel">Tel:</label>
+                    <input type = "tel" name = "tel" id = "tel" placeholder = "Ex. : 078-000-00-00">
 
-                <label for = "nbEntier">Nombre entier:</label>
-                <input type = "number" name = "nombre entier" id = "nbEntier" placeholder = "Ex. : 24">
+                    <label for = "nbEntier">Nombre entier:</label>
+                    <input type = "number" name = "nombre entier" id = "nbEntier" placeholder = "Ex. : 24">
+                </fieldset>
 
-                <div>Audio settings:</div>
-                
-                <div>
-                    <input type = "range" name = "range volume" id = "rangeVol">
-                    <label for = "rangeVol">Volume</label>
-                </div>
-                <div>
+                <fieldset>
+                    <legend>Différents formulaires test</legend>
+                    <div>Audio settings:</div>
+                    <div>
+                        <input type = "range" name = "range volume" id = "rangeVol">
+                        <label for = "rangeVol">Volume</label>
+                    </div>
+                    <div>
+                        <input 
+                            type = "range"
+                            id = "cowbell"
+                            name = "cowbell"
+                            min = "0"
+                            max = "100"
+                            value = "90"
+                            step = "10" />
+                            <label for = "cowbell">Cowbell</label>
+                    </div>
+
+                    <label for = "date">Date:</label>
                     <input 
-                        type = "range"
-                        id = "cowbell"
-                        name = "cowbell"
-                        min = "0"
-                        max = "100"
-                        value = "90"
-                        step = "10" />
-                        <label for = "cowbell">Cowbell</label>
-                </div>
+                        type = "date"
+                        id = "date"
+                        name = "trip-start"
+                        value = "2025-01-01"
+                        min = "2025-01-01"
+                        max = "2027-12-31"
+                        class = "autoSizing"
+                    />
 
-                <label for = "date">Date:</label>
-                <input 
-                    type = "date"
-                    id = "date"
-                    name = "trip-start"
-                    value = "2025-01-01"
-                    min = "2025-01-01"
-                    max = "2027-12-31"
-                    class = "autoSizing"
-                />
+                    <label for = "time">Heure:</label>
+                    <input type = "time" id = "time" name = "time" class = "autoSizing">
 
-                <label for = "time">Heure:</label>
-                <input type = "time" id = "time" name = "time" class = "autoSizing">
+                    <label for = "week">Semaine:</label>
+                    <input type = "week" id = "week" name = "week" class = "autoSizing">
 
-                <label for = "week">Semaine:</label>
-                <input type = "week" id = "week" name = "week" class = "autoSizing">
+                    <label for = "month">Mois:</label>
+                    <input type = "month" id = "month" name = "month" class = "autoSizing">
 
-                <label for = "month">Mois:</label>
-                <input type = "month" id = "month" name = "month" class = "autoSizing">
+                    <label for = "datetime">Date et heure (gestion décalage horaire):</label>
+                    <input type = "datetime" id = "datetime" name = "datetime" class = "autoSizing">
 
-                <label for = "datetime">Date et heure (gestion décalage horaire):</label>
-                <input type = "datetime" id = "datetime" name = "datetime" class = "autoSizing">
-
-                <label for = "datetime-local">Date et heure (locales):</label>
-                <input type = "datetime-local" id = "datetime-local" name = "datetime-local" class = "autoSizing">
+                    <label for = "datetime-local">Date et heure (locales):</label>
+                    <input type = "datetime-local" id = "datetime-local" name = "datetime-local" class = "autoSizing">
 
 
-                <label for = "site-search">Rechercher:</label>
-                <div>
-                    <input type = "site-search" id = "site-search" name = "q">
-                    <button>GO !</button>
-                </div> 
+                    <label for = "site-search">Rechercher:</label>
+                    <div>
+                        <input type = "site-search" id = "site-search" name = "q">
+                        <button>GO !</button>
+                    </div> 
 
-                <div>
-                    Cochez les aliments que vous aimez manger :<br>
-                    <input type = "checkbox" name = "frites" id = "frites"> <label for = "frites">Frites</label><br>
-                    <input type = "checkbox" name = "steak" id = "steak" checked> <label for = "steak">Steak</label><br>
-                    <input type = "checkbox" name = "epinards" id = "epinards"> <label for = "epinards">Épinards</label><br>
-                    <input type = "checkbox" name = "huitres" id = "huitres"> <label for = "huitres">Huitres</label>
-                </div>
+                    <div>
+                        Cochez les aliments que vous aimez manger :<br>
+                        <input type = "checkbox" name = "frites" id = "frites"> <label for = "frites">Frites</label><br>
+                        <input type = "checkbox" name = "steak" id = "steak" checked> <label for = "steak">Steak</label><br>
+                        <input type = "checkbox" name = "epinards" id = "epinards"> <label for = "epinards">Épinards</label><br>
+                        <input type = "checkbox" name = "huitres" id = "huitres"> <label for = "huitres">Huitres</label>
+                    </div>
 
-                <div>
-                    <!-- value dans ce cas identifie ce que le visiteur a choisi -->
-                    Veuillez indiquer la tranche d'âge dans laquelle vous vous situez :<br>
-                    <input type = "radio" name = "age" value = "moins15" id = "moins15"> <label for = "moins15">Moins de 15 ans</label><br>
-                    <input type = "radio" name = "age" value = "medium15-25" id = "medium15-25"> <label for = "medium15-25">15-25 ans</label><br>
-                    <input type = "radio" name = "age" value = "medium25-40" id = "medium25-40" checked> <label for = "medium25-40">25-40 ans</label><br>
-                    <input type = "radio" name = "age" value = "plus40" id = "plus40"> <label for = "plus40">Plus de 40 ans</label>
-                </div>
+                    <div>
+                        <!-- value dans ce cas identifie ce que le visiteur a choisi -->
+                        Veuillez indiquer la tranche d'âge dans laquelle vous vous situez :<br>
+                        <input type = "radio" name = "age" value = "moins15" id = "moins15"> <label for = "moins15">Moins de 15 ans</label><br>
+                        <input type = "radio" name = "age" value = "medium15-25" id = "medium15-25"> <label for = "medium15-25">15-25 ans</label><br>
+                        <input type = "radio" name = "age" value = "medium25-40" id = "medium25-40" checked> <label for = "medium25-40">25-40 ans</label><br>
+                        <input type = "radio" name = "age" value = "plus40" id = "plus40"> <label for = "plus40">Plus de 40 ans</label>
+                    </div>
 
-                <div>
-                    Sur quel continent habitez-vous ?<br>
-                    <input type= "radio" name = "continent" value = "europe" id = "europe" checked> <label for = "europe">Europe</label><br>
-                    <input type= "radio" name = "continent" value = "afrique" id = "afrique"> <label for = "afrique">Afrique</label><br>
-                    <input type= "radio" name = "continent" value = "asie" id = "asie"> <label for = "asie">Asie</label><br>
-                    <input type= "radio" name = "continent" value = "amerique" id = "amerique"> <label for = "amerique">Amérique</label><br>
-                    <input type= "radio" name = "continent" value = "oceanie" id = "oceanie"> <label for = "oceanie">Océanie</label>
-                </div>
-                <div>
-                    <label for="pays">Dans quel pays habitez-vous ?</label><br>
-                    <select name="pays" id="pays">
-                        <option value = "espagne">Espagne</option>
-                        <option value = "royaume-uni">Royaume-Uni</option>
-                        <option value = "suisse" selected>Suisse</option>
-                        <option value = "canada">Canada</option>
-                        <option value = "japon">Japon</option>
-                    </select>
-                </div>
+                    <div>
+                        Sur quel continent habitez-vous ?<br>
+                        <input type= "radio" name = "continent" value = "europe" id = "europe" checked> <label for = "europe">Europe</label><br>
+                        <input type= "radio" name = "continent" value = "afrique" id = "afrique"> <label for = "afrique">Afrique</label><br>
+                        <input type= "radio" name = "continent" value = "asie" id = "asie"> <label for = "asie">Asie</label><br>
+                        <input type= "radio" name = "continent" value = "amerique" id = "amerique"> <label for = "amerique">Amérique</label><br>
+                        <input type= "radio" name = "continent" value = "oceanie" id = "oceanie"> <label for = "oceanie">Océanie</label>
+                    </div>
+                    <div>
+                        <label for="pays">Dans quel pays habitez-vous ?</label><br>
+                        <select name="pays" id="pays">
+                            <option value = "espagne">Espagne</option>
+                            <option value = "royaume-uni">Royaume-Uni</option>
+                            <option value = "suisse" selected>Suisse</option>
+                            <option value = "canada">Canada</option>
+                            <option value = "japon">Japon</option>
+                        </select>
+                    </div>
 
-                <label for = "ameliorer">Des conseils pour améliorer mon site:</label>
-                <!-- textarea: champ avec multilignes, peut être étiré  -->
-                 <!-- rows et cols pour le nb de lignes et colonnes -->
-                <textarea name = "ameliorer" id = "ameliorer" rows = "6" cols = "6">Texte par défaut dans la balise ouvrante et fermante</textarea>
+                    <label for = "ameliorer">Des conseils pour améliorer mon site:</label>
+                    <!-- textarea: champ avec multilignes, peut être étiré  -->
+                    <!-- rows et cols pour le nb de lignes et colonnes -->
+                    <textarea name = "ameliorer" id = "ameliorer" rows = "6" cols = "6">Texte par défaut dans la balise ouvrante et fermante</textarea>
+                </fieldset>
+
+
+                <!-- type = "subtmit": navigateur comprend qu'il s'agit d'un bouton qui va permettre d'envoyer les données du formulaire -->
+                <!-- type = "reset": remise à zero du formulaire -->
+                <!-- type = "image": équivalent à "reset" mais avec img, rajouter src pour link img -->
+                <!-- type = "button": bouton générique, qui n'aura aucun effet -->
+                <input type = "submit" value = "Envoyer"/>
             </form>
         </section>
         
-
-        <p>
+        <section>
             <a href = "../images/imagesTest/photo_cygnes.jpg">
                 <img src = "../images/imagesTest/photo_cygnes_miniature.jpg" alt = "Ces oiseaux sont des cygnes." title = "Cygnes"/>
             </a>    
-        </p>
+        </section>
 
-        <h3>Liste non numérotée.</h3>
-        <ul>
-            <li><strong> Element num 1 et en gras </strong></li>
-            <li><mark>Element num 2 et surligné</mark></li>
-            <li><em>Element num 3 et en italique</em></li>
-            <li>Element num 4</li>
-            <li>Element num 5</li>
-            <li>Element num 6</li>
-        </ul>
+        <section>
+            <h3>Liste non numérotée.</h3>
+            <ul>
+                <li><strong> Element num 1 et en gras </strong></li>
+                <li><mark>Element num 2 et surligné</mark></li>
+                <li><em>Element num 3 et en italique</em></li>
+                <li>Element num 4</li>
+                <li>Element num 5</li>
+                <li>Element num 6</li>
+            </ul>
 
-        <h3>Liste numérotée.</h3>
-        <ol>
-            <li>alouette des champs,</li>
-            <li>aigrette garzette,</li>
-            <li>crabier chevelu,</li>
-            <li>gypaète barbu,</li>
-            <li>mésange bleue,</li>
-            <li>mouette tâchetée</li>
-        </ol>
+            <h3>Liste numérotée.</h3>
+            <ol>
+                <li>alouette des champs,</li>
+                <li>aigrette garzette,</li>
+                <li>crabier chevelu,</li>
+                <li>gypaète barbu,</li>
+                <li>mésange bleue,</li>
+                <li>mouette tâchetée</li>
+            </ol>
+        </section>
     </main>
     <footer>
         <a href = "https://www.instagram.com/">Instagram</a>
@@ -337,5 +352,3 @@
 
 </body>
 </html>
-
-<!-- CONTINUER VIDEO DECOUVREZ LES BASES DE CSS GRIDS  -->
