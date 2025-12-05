@@ -1,2 +1,3 @@
-2025/11/10-12:08:24.775 5270 Creating DB C:\Users\vleyre\Workspace\repo_victor\ApprentissageJava\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\shared_proto_db since it was missing.
-2025/11/10-12:08:24.859 5270 Reusing MANIFEST C:\Users\vleyre\Workspace\repo_victor\ApprentissageJava\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\shared_proto_db/MANIFEST-000001
+2025/12/05-17:03:09.006 b78 Reusing MANIFEST C:\Users\vleyre\Workspace\repo_victor\ApprentissageJava\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\shared_proto_db/MANIFEST-000001
+2025/12/05-17:03:09.015 b78 Recovering log #3
+2025/12/05-17:03:09.018 b78 Reusing old log C:\Users\vleyre\Workspace\repo_victor\ApprentissageJava\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\shared_proto_db/000003.log 
